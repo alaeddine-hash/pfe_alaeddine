@@ -1,0 +1,39 @@
+Présentation de l'Application de Gestion des Vulnérabilités
+1. Contexte du Projet et Problématique
+Contexte du Projet :
+Les administrateurs de sécurité sont confrontés à une charge de travail considérable, étant obligés de gérer et analyser un nombre croissant de vulnérabilités (CVE) chaque jour. La complexité de ces tâches est exacerbée par la nécessité de comprendre l'impact de chaque vulnérabilité sur des systèmes variés et souvent hétérogènes. Le besoin d'identifier rapidement les vulnérabilités critiques et d'y répondre efficacement est plus important que jamais, mais devient de plus en plus difficile sans l'aide d'outils automatisés.
+
+Problématique :
+Comment fournir aux administrateurs de sécurité un outil capable de traiter un grand volume de CVEs, de les analyser en profondeur par rapport à la configuration spécifique du système, et de fournir des recommandations basées sur les meilleures pratiques en cybersécurité, le tout en s'appuyant sur des technologies avancées comme le Graph RAG et les modèles de langage (LLM) ?
+
+2. Introduction
+L'application de gestion des vulnérabilités est conçue pour répondre à ces défis en automatisant l'analyse des vulnérabilités et en facilitant la prise de décision des administrateurs de sécurité. En exploitant le Graph RAG, l'application peut non seulement lier les vulnérabilités à des configurations spécifiques du système, mais aussi découvrir des relations complexes entre différentes menaces qui pourraient autrement passer inaperçues. Combiné avec l'analyse par LLM, l'application génère des recommandations personnalisées pour chaque vulnérabilité identifiée, offrant ainsi une solution complète pour la gestion proactive de la sécurité.
+
+3. Besoins Fonctionnels et Non Fonctionnels
+Besoins Fonctionnels :
+
+Automatisation de l'Analyse des CVEs : L'application doit être capable d'analyser quotidiennement un grand volume de CVEs, en utilisant le Graph RAG pour relier les vulnérabilités aux configurations spécifiques du système.
+Analyse Approfondie de la Configuration Système : L'application doit comparer chaque CVE détectée avec la configuration du système de l'utilisateur pour évaluer l'impact potentiel et adapter les recommandations en conséquence.
+Génération de Recommandations Personnalisées : Pour chaque vulnérabilité, l'application doit fournir des recommandations adaptées, incluant des solutions telles que l'application de correctifs ou des mesures de mitigation.
+Tableau de Bord Intuitif : Un tableau de bord doit permettre aux administrateurs de visualiser les vulnérabilités, leurs impacts, et les actions recommandées, avec des options de filtrage avancées.
+Besoins Non Fonctionnels :
+
+Scalabilité : L'application doit pouvoir évoluer pour gérer un nombre croissant de vulnérabilités et de systèmes, tout en maintenant des performances optimales.
+Sécurité des Données : Toutes les informations traitées doivent être protégées, assurant la confidentialité et l'intégrité des données sensibles.
+Fiabilité : Le système doit être disponible en permanence, permettant une surveillance continue et une réponse rapide aux nouvelles menaces.
+Performance : L'analyse des CVEs et la génération des recommandations doivent être réalisées en temps réel, sans affecter les performances globales du système.
+4. Démonstration de l'Application
+Analyse des Vulnérabilités avec Graph RAG et LLM :
+L'application utilise le Graph RAG pour indexer et relier les CVEs aux configurations système de l'entreprise. Cette méthode permet d'identifier non seulement les vulnérabilités directes, mais aussi les menaces cachées qui peuvent affecter plusieurs composants du système. En comparant chaque CVE avec la configuration du système, l'application est capable de fournir une analyse approfondie de l'impact potentiel des vulnérabilités spécifiques.
+
+Analyse Approfondie de la Configuration Système :
+L'application permet d'évaluer les vulnérabilités en fonction de la configuration détaillée du système, que ce soit via des fichiers YAML définis manuellement par l'administrateur réseau, des scans agressifs réalisés avec Nmap, ou l'intégration d'outils de gestion de configuration comme Ansible et Puppet. Cette approche garantit que les recommandations fournies sont parfaitement adaptées au contexte spécifique de chaque entreprise.
+
+Recommandations Automatiques :
+Lorsqu'une vulnérabilité est détectée, l'application propose automatiquement des recommandations. Si un correctif est disponible, un lien direct est fourni. Si ce n'est pas le cas, des mesures de mitigation sont suggérées. Dans certains cas, si la vulnérabilité ne représente pas un risque immédiat, l'application notifie qu'aucune action n'est nécessaire.
+
+Tableau de Bord Interactif :
+Le tableau de bord présente une vue globale des vulnérabilités détectées, avec des graphiques interactifs montrant la distribution des vulnérabilités par impact et par système d'exploitation. Les cinq dernières vulnérabilités critiques sont mises en avant pour une gestion rapide, et les utilisateurs peuvent filtrer les informations selon différents critères pour cibler les menaces les plus pressantes.
+
+5. Conclusion Générale
+Le projet aboutit à la création d'une application de gestion des vulnérabilités innovante, conçue pour simplifier la vie des administrateurs de sécurité face à la complexité croissante de la cybersécurité. Grâce à l'intégration de technologies avancées telles que le Graph RAG et les modèles de langage, l'application offre une solution puissante pour l'analyse et la gestion des vulnérabilités. Elle permet non seulement de détecter les menaces, mais aussi de proposer des actions correctives basées sur des données actualisées, tout en offrant une vue d'ensemble claire et accessible via un tableau de bord interactif. L'analyse approfondie des configurations système garantit que les recommandations sont parfaitement adaptées à chaque contexte spécifique, ce qui permet aux entreprises de mieux protéger leurs infrastructures contre les menaces en constante évolution.
